@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sharanya — Oil Paintings, London</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Jost:wght@200;300;400&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:#0e0d0c;color:#e8e0d5;font-family:'Jost',sans-serif;font-weight:300}
+a{text-decoration:none;color:inherit}
+nav{display:flex;justify-content:space-between;align-items:center;padding:2rem 3rem;border-bottom:0.5px solid rgba(232,224,213,0.12);position:sticky;top:0;background:#0e0d0c;z-index:100}
+.logo{font-family:'Cormorant Garamond',serif;font-size:22px;font-weight:300;letter-spacing:0.18em;text-transform:uppercase}
+.nav-links{display:flex;gap:2.5rem}
+.nav-links a{font-size:11px;letter-spacing:0.2em;text-transform:uppercase;color:rgba(232,224,213,0.5);transition:color 0.2s}
+.nav-links a:hover{color:#e8e0d5}
+.hero{padding:6rem 3rem 5rem;border-bottom:0.5px solid rgba(232,224,213,0.12);max-width:700px}
+.hero-eyebrow{font-size:10px;letter-spacing:0.3em;text-transform:uppercase;color:#c4a882;margin-bottom:1.5rem}
+.hero h1{font-family:'Cormorant Garamond',serif;font-size:72px;font-weight:300;line-height:1.0;color:#e8e0d5;margin-bottom:2rem}
+.hero h1 em{font-style:italic;color:#c4a882}
+.hero p{font-size:14px;letter-spacing:0.04em;line-height:1.9;color:rgba(232,224,213,0.55);max-width:420px;margin-bottom:2.5rem}
+.hero-links{display:flex;gap:2rem;align-items:center}
+.btn{font-size:10px;letter-spacing:0.25em;text-transform:uppercase;padding:14px 30px;background:#c4a882;color:#0e0d0c;border:none;cursor:pointer;display:inline-block}
+.btn:hover{opacity:0.85}
+.btn-ghost{font-size:10px;letter-spacing:0.2em;text-transform:uppercase;color:rgba(232,224,213,0.5);transition:color 0.2s}
+.btn-ghost:hover{color:#e8e0d5}
+.section{padding:5rem 3rem;border-bottom:0.5px solid rgba(232,224,213,0.12)}
+.eyebrow{font-size:10px;letter-spacing:0.3em;text-transform:uppercase;color:#c4a882;margin-bottom:1.2rem}
+.section-title{font-family:'Cormorant Garamond',serif;font-size:44px;font-weight:300;line-height:1.1;margin-bottom:3rem}
+.section-title em{font-style:italic}
+.works-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2px}
+.work-item{position:relative;overflow:hidden;cursor:pointer}
+.work-item a{display:block}
+.work-bg{aspect-ratio:3/4;width:100%;transition:transform 0.5s}
+.work-item:hover .work-bg{transform:scale(1.02)}
+.w1{background:linear-gradient(145deg,#c8a090 0%,#a07878 40%,#786060 70%,#584848 100%)}
+.w2{background:linear-gradient(160deg,#1a2a3a 0%,#2a4a5a 25%,#1a3545 50%,#d08060 80%,#f0c0a0 100%)}
+.w3{background:linear-gradient(145deg,#e8c8d8 0%,#d0a0c0 30%,#b07090 60%,#806070 100%)}
+.work-overlay{position:absolute;inset:0;background:rgba(14,13,12,0);transition:background 0.3s;display:flex;flex-direction:column;justify-content:flex-end;padding:1.5rem}
+.work-item:hover .work-overlay{background:rgba(14,13,12,0.75)}
+.work-info{opacity:0;transform:translateY(6px);transition:opacity 0.3s,transform 0.3s}
+.work-item:hover .work-info{opacity:1;transform:translateY(0)}
+.work-info h3{font-family:'Cormorant Garamond',serif;font-size:20px;font-weight:300;font-style:italic;margin-bottom:6px}
+.work-info p{font-size:10px;letter-spacing:0.18em;color:rgba(232,224,213,0.6);margin-bottom:10px}
+.work-link{font-size:9px;letter-spacing:0.25em;text-transform:uppercase;color:#c4a882;border-bottom:0.5px solid rgba(196,168,130,0.4);padding-bottom:2px}
+.available-badge{position:absolute;top:1rem;left:1rem;font-size:9px;letter-spacing:0.2em;text-transform:uppercase;background:rgba(196,168,130,0.15);color:#c4a882;padding:5px 10px}
+.wip-badge{position:absolute;top:1rem;left:1rem;font-size:9px;letter-spacing:0.2em;text-transform:uppercase;background:rgba(14,13,12,0.8);color:rgba(232,224,213,0.4);padding:5px 10px}
+.about-grid{display:grid;grid-template-columns:1fr 1.2fr;gap:6rem;align-items:start}
+.about-image{aspect-ratio:2/3;border:0.5px solid rgba(232,224,213,0.08);background:linear-gradient(145deg,#2a2018 0%,#1a1510 60%,#0e0d0c 100%);display:flex;align-items:center;justify-content:center}
+.about-image-label{font-size:10px;letter-spacing:0.2em;text-transform:uppercase;color:rgba(232,224,213,0.2)}
+.about-text p{font-size:14px;line-height:1.95;color:rgba(232,224,213,0.6);margin-bottom:1.2rem}
+.about-text p.lead{font-family:'Cormorant Garamond',serif;font-size:21px;font-style:italic;font-weight:300;line-height:1.6;color:rgba(232,224,213,0.85);margin-bottom:1.8rem}
+.about-link{display:inline-block;margin-top:1.5rem;font-size:10px;letter-spacing:0.25em;text-transform:uppercase;color:#c4a882;border-bottom:0.5px solid rgba(196,168,130,0.4);padding-bottom:2px}
+.commissions{background:#131210}
+.commissions-inner{max-width:580px}
+.commissions-inner p{font-size:14px;line-height:1.9;color:rgba(232,224,213,0.55);margin-bottom:2rem}
+.contact-section{padding:6rem 3rem;text-align:center;border-bottom:0.5px solid rgba(232,224,213,0.12)}
+.contact-section .section-title{font-size:56px;margin-bottom:1rem}
+.contact-section p{font-size:13px;color:rgba(232,224,213,0.4);letter-spacing:0.06em;margin-bottom:2.5rem}
+.contact-email{font-size:13px;letter-spacing:0.15em;color:#c4a882;border-bottom:0.5px solid rgba(196,168,130,0.35);padding-bottom:3px}
+footer{padding:2rem 3rem;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem}
+footer p{font-size:10px;letter-spacing:0.15em;text-transform:uppercase;color:rgba(232,224,213,0.2)}
+@media(max-width:768px){
+nav{padding:1.5rem}
+.nav-links{gap:1.5rem}
+.hero{padding:4rem 1.5rem}
+.hero h1{font-size:48px}
+.section{padding:3.5rem 1.5rem}
+.works-grid{grid-template-columns:1fr 1fr}
+.about-grid{grid-template-columns:1fr;gap:2.5rem}
+.about-image{aspect-ratio:4/3}
+.contact-section{padding:4rem 1.5rem}
+.contact-section .section-title{font-size:38px}
+footer{padding:1.5rem;flex-direction:column;align-items:flex-start}
+}
+</style>
+</head>
+<body>
+<nav>
+  <div class="logo">Sharanya</div>
+  <div class="nav-links">
+    <a href="#works">Works</a>
+    <a href="#about">About</a>
+    <a href="#commissions">Commissions</a>
+    <a href="#contact">Contact</a>
+  </div>
+</nav>
+<section class="hero">
+  <div class="hero-eyebrow">Oil on canvas · London</div>
+  <h1>Oil on canvas.<br><em>Made in London.</em></h1>
+  <p>Paintings that live somewhere between the quiet and the dramatic. Florals, seascapes, and the things that speak first.</p>
+  <div class="hero-links">
+    <a href="#works" class="btn">View works</a>
+    <a href="#commissions" class="btn-ghost">Commissions open →</a>
+  </div>
+</section>
+<section class="section" id="works">
+  <div class="eyebrow">Selected works</div>
+  <div class="section-title">The <em>collection</em></div>
+  <div class="works-grid">
+    <div class="work-item">
+      <a href="https://www.etsy.com/shop/YourEtsyShopName" target="_blank">
+        <div class="work-bg w1"></div>
+        <div class="work-overlay">
+          <div class="work-info">
+            <h3>Ranunculus in Glass</h3>
+            <p>Oil on canvas · £130</p>
+            <span class="work-link">View on Etsy →</span>
+          </div>
+        </div>
+        <div class="available-badge">Available</div>
+      </a>
+    </div>
+    <div class="work-item">
+      <div class="work-bg w2"></div>
+      <div class="work-overlay">
+        <div class="work-info">
+          <h3>Before the Storm</h3>
+          <p>Oil on canvas · £320</p>
+          <span class="work-link">Enquire →</span>
+        </div>
+      </div>
+      <div class="available-badge">Available</div>
+    </div>
+    <div class="work-item">
+      <div class="work-bg w3"></div>
+      <div class="work-overlay">
+        <div class="work-info">
+          <h3>Peonies</h3>
+          <p>Oil on canvas · Coming soon</p>
+        </div>
+      </div>
+      <div class="wip-badge">In progress</div>
+    </div>
+  </div>
+</section>
+<section class="section" id="about">
+  <div class="about-grid">
+    <div class="about-image">
+      <span class="about-image-label">Studio, London</span>
+    </div>
+    <div class="about-text">
+      <div class="eyebrow">The artist</div>
+      <div class="section-title" style="font-size:38px;margin-bottom:1.5rem"><em>Sharanya</em></div>
+      <p class="lead">Life got very busy and I felt like I was forgetting who I was. I picked up a brush again. Turns out that helped.</p>
+      <p>I live on a little hill in London. I paint florals, seascapes, and whatever whispers to me on a given afternoon. Colour is my love language and I've always secretly wanted to live in the Victorian era — you'll notice.</p>
+      <p>Most of my life I've painted for the people I love. I'm learning, slowly and joyfully, to paint for myself too. These are those paintings.</p>
+      <p>I'm also a student economist by day, which means every single purchase genuinely means the world.</p>
+      <a href="#commissions" class="about-link">Commission a piece →</a>
+    </div>
+  </div>
+</section>
+<section class="section commissions" id="commissions">
+  <div class="commissions-inner">
+    <div class="eyebrow">Commissions</div>
+    <div class="section-title">Something <em>made for you</em></div>
+    <p>I occasionally take commissions. If you have something in mind — a flower, a place, a feeling — drop me a line and we can talk about it. I paint what speaks to me, so commissions work best when there's room to make something that feels true.</p>
+    <a href="mailto:sharuseth2@gmail.com" class="btn">Get in touch</a>
+  </div>
+</section>
+<section class="contact-section" id="contact">
+  <div class="eyebrow">Contact</div>
+  <div class="section-title"><em>Say hello</em></div>
+  <p>For commissions, enquiries, or just to say something nice.</p>
+  <a href="mailto:sharuseth2@gmail.com" class="contact-email">sharuseth2@gmail.com</a>
+</section>
+<footer>
+  <p>© Sharanya 2026</p>
+  <p>London, England</p>
+  <p>All works original oil on canvas</p>
+</footer>
+</body>
+</html>
