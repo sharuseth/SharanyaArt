@@ -47,13 +47,16 @@ nav{display:flex;justify-content:space-between;align-items:center;padding:2rem 3
 .work-info p{font-size:10px;letter-spacing:0.18em;color:rgba(232,224,213,0.6);margin-bottom:10px}
 .work-link{font-size:9px;letter-spacing:0.25em;text-transform:uppercase;color:#c4a882;border-bottom:0.5px solid rgba(196,168,130,0.4);padding-bottom:2px}
 .available-badge{position:absolute;top:1rem;left:1rem;font-size:9px;letter-spacing:0.2em;text-transform:uppercase;background:rgba(196,168,130,0.15);color:#c4a882;padding:5px 10px}
-.sold-overlay{position:absolute;inset:0;background:rgba(14,13,12,0.7);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:1rem;cursor:pointer}
-.sold-label{font-size:9px;letter-spacing:0.35em;text-transform:uppercase;color:rgba(232,224,213,0.5);border:0.5px solid rgba(232,224,213,0.2);padding:8px 16px}
-.sold-sub{font-family:'Cormorant Garamond',serif;font-size:15px;font-style:italic;color:rgba(232,224,213,0.4);text-align:center;padding:0 2rem}
-.sold-cta{font-size:9px;letter-spacing:0.25em;text-transform:uppercase;color:#c4a882;border-bottom:0.5px solid rgba(196,168,130,0.4);padding-bottom:2px;margin-top:0.5rem}
-.wip-overlay{position:absolute;inset:0;background:rgba(14,13,12,0.6);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:1rem}
+.sold-overlay{position:absolute;inset:0;background:rgba(14,13,12,0);transition:background 0.3s;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:1rem}
+.work-item:hover .sold-overlay{background:rgba(14,13,12,0.75)}
+.sold-content{opacity:0;transform:translateY(6px);transition:opacity 0.3s,transform 0.3s;display:flex;flex-direction:column;align-items:center;gap:1rem}
+.work-item:hover .sold-content{opacity:1;transform:translateY(0)}
+.sold-label{font-size:9px;letter-spacing:0.35em;text-transform:uppercase;color:rgba(232,224,213,0.6);border:0.5px solid rgba(232,224,213,0.3);padding:8px 16px}
+.sold-sub{font-family:'Cormorant Garamond',serif;font-size:15px;font-style:italic;color:rgba(232,224,213,0.5);text-align:center;padding:0 2rem}
+.sold-cta{font-size:9px;letter-spacing:0.25em;text-transform:uppercase;color:#c4a882;border-bottom:0.5px solid rgba(196,168,130,0.4);padding-bottom:2px}
+.wip-overlay{position:absolute;inset:0;background:rgba(14,13,12,0.55);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:1rem}
 .wip-label{font-size:9px;letter-spacing:0.35em;text-transform:uppercase;color:rgba(232,224,213,0.5);border:0.5px solid rgba(232,224,213,0.2);padding:8px 16px}
-.wip-title{font-family:'Cormorant Garamond',serif;font-size:18px;font-style:italic;color:rgba(232,224,213,0.6);text-align:center}
+.wip-title{font-family:'Cormorant Garamond',serif;font-size:18px;font-style:italic;color:rgba(232,224,213,0.7);text-align:center}
 .wip-cta{font-size:9px;letter-spacing:0.25em;text-transform:uppercase;color:#c4a882;border-bottom:0.5px solid rgba(196,168,130,0.4);padding-bottom:2px}
 .about-grid{display:grid;grid-template-columns:1fr 1.2fr;gap:6rem;align-items:start}
 .about-image{aspect-ratio:2/3;border:0.5px solid rgba(232,224,213,0.08);overflow:hidden}
@@ -88,6 +91,7 @@ footer{padding:1.5rem;flex-direction:column;align-items:flex-start}
 </style>
 </head>
 <body>
+
 <nav>
   <div class="logo">Sharanya</div>
   <div class="nav-links">
@@ -104,7 +108,7 @@ footer{padding:1.5rem;flex-direction:column;align-items:flex-start}
     <h1>Oil on canvas.<br><em>Made in London.</em></h1>
     <p>Paintings that live somewhere between the quiet and the dramatic. Florals, seascapes, and the things that speak first.</p>
     <div class="hero-links">
-      <a href="https://www.etsy.com/uk/listing/4526975838/ranunculus-in-glass-london-2025-oil-on" target="_blank" class="btn">Shop now</a>
+      <a href="https://www.etsy.com/uk/listing/4526975838/ranunculus-in-glass-london-2025-oil-on?sr_prefetch=1&pf_from=shop_home&ref=shop_home_active_1&logging_key=1b5369bf832a3b062f1e2e38c5d3b9387d169f46%3A4526975838" target="_blank" class="btn">Shop now</a>
       <a href="#commissions" class="btn-ghost">Commissions open →</a>
     </div>
   </div>
@@ -119,9 +123,9 @@ footer{padding:1.5rem;flex-direction:column;align-items:flex-start}
   <div class="works-grid">
 
     <div class="work-item">
-      <a href="https://www.etsy.com/uk/listing/4526975838/ranunculus-in-glass-london-2025-oil-on" target="_blank">
+      <a href="https://www.etsy.com/uk/listing/4526975838/ranunculus-in-glass-london-2025-oil-on?sr_prefetch=1&pf_from=shop_home&ref=shop_home_active_1&logging_key=1b5369bf832a3b062f1e2e38c5d3b9387d169f46%3A4526975838" target="_blank">
         <div class="work-bg">
-          <img src="Rose_whitewall.jpg" alt="Ranunculus in Glass">
+          <img src="Rose_whitewell.jpg" alt="Ranunculus in Glass">
         </div>
         <div class="work-overlay">
           <div class="work-info">
@@ -135,7 +139,7 @@ footer{padding:1.5rem;flex-direction:column;align-items:flex-start}
     </div>
 
     <div class="work-item">
-      <a href="https://www.etsy.com/uk/listing/4526975838/ranunculus-in-glass-london-2025-oil-on" target="_blank">
+      <a href="https://www.etsy.com/uk/listing/4526975838/ranunculus-in-glass-london-2025-oil-on?sr_prefetch=1&pf_from=shop_home&ref=shop_home_active_1&logging_key=1b5369bf832a3b062f1e2e38c5d3b9387d169f46%3A4526975838" target="_blank">
         <div class="work-bg">
           <img src="Rose_magazine.jpg" alt="Ranunculus in Glass styled">
         </div>
@@ -156,9 +160,11 @@ footer{padding:1.5rem;flex-direction:column;align-items:flex-start}
           <img src="Blue_FlowerVase.JPG" alt="Before the Storm seascape">
         </div>
         <div class="sold-overlay">
-          <span class="sold-label">Sold</span>
-          <span class="sold-sub">This piece has found its home</span>
-          <span class="sold-cta">Commission something similar →</span>
+          <div class="sold-content">
+            <span class="sold-label">Sold</span>
+            <span class="sold-sub">This piece has found its home</span>
+            <span class="sold-cta">Commission something similar →</span>
+          </div>
         </div>
       </a>
     </div>
@@ -169,9 +175,11 @@ footer{padding:1.5rem;flex-direction:column;align-items:flex-start}
           <img src="Blue_EiCoffeetable.JPG" alt="Before the Storm detail">
         </div>
         <div class="sold-overlay">
-          <span class="sold-label">Sold</span>
-          <span class="sold-sub">This piece has found its home</span>
-          <span class="sold-cta">Commission something similar →</span>
+          <div class="sold-content">
+            <span class="sold-label">Sold</span>
+            <span class="sold-sub">This piece has found its home</span>
+            <span class="sold-cta">Commission something similar →</span>
+          </div>
         </div>
       </a>
     </div>
@@ -182,16 +190,19 @@ footer{padding:1.5rem;flex-direction:column;align-items:flex-start}
           <img src="Blue_EifLOWER.JPG" alt="Pink Shore seascape">
         </div>
         <div class="sold-overlay">
-          <span class="sold-label">Sold</span>
-          <span class="sold-sub">This piece has found its home</span>
-          <span class="sold-cta">Commission something similar →</span>
+          <div class="sold-content">
+            <span class="sold-label">Sold</span>
+            <span class="sold-sub">This piece has found its home</span>
+            <span class="sold-cta">Commission something similar →</span>
+          </div>
         </div>
       </a>
     </div>
 
     <div class="work-item">
       <a href="https://www.instagram.com/what_sharu_does" target="_blank">
-        <div class="work-bg" style="background:linear-gradient(145deg,#e8c8d8 0%,#d0a0c0 30%,#b07090 60%,#806070 100%)">
+        <div class="work-bg">
+          <img src="Peony_Crop.JPG" alt="Peonies, work in progress">
         </div>
         <div class="wip-overlay">
           <span class="wip-label">Coming soon</span>
@@ -242,5 +253,6 @@ footer{padding:1.5rem;flex-direction:column;align-items:flex-start}
   <p>London, England</p>
   <p>All works original oil on canvas</p>
 </footer>
+
 </body>
 </html>
