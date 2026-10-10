@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Commissions · Sharanya</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Jost:wght@200;300;400&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:#0e0d0c;color:#e8e0d5;font-family:'Jost',sans-serif;font-weight:300}
+a{text-decoration:none;color:inherit}
+nav{display:flex;justify-content:space-between;align-items:center;padding:2rem 3rem;border-bottom:0.5px solid rgba(232,224,213,0.12);position:sticky;top:0;background:#0e0d0c;z-index:100}
+.logo{font-family:'Cormorant Garamond',serif;font-size:22px;font-weight:300;letter-spacing:0.18em;text-transform:uppercase}
+.back{font-size:11px;letter-spacing:0.2em;text-transform:uppercase;color:rgba(232,224,213,0.5)}
+.back:hover{color:#e8e0d5}
+.wrap{max-width:720px;margin:0 auto;padding:5rem 3rem}
+.eyebrow{font-size:10px;letter-spacing:0.3em;text-transform:uppercase;color:#c4a882;margin-bottom:1.2rem}
+.title{font-family:'Cormorant Garamond',serif;font-size:52px;font-weight:300;line-height:1.1;margin-bottom:2.5rem}
+.title em{font-style:italic}
+.intro p{font-size:14px;line-height:1.9;color:rgba(232,224,213,0.62);margin-bottom:1.2rem}
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:1.5rem;margin:3rem 0}
+.step .num{font-family:'Cormorant Garamond',serif;font-size:28px;font-style:italic;color:#c4a882;margin-bottom:0.6rem}
+.step h4{font-size:11px;letter-spacing:0.15em;text-transform:uppercase;color:#e8e0d5;margin-bottom:0.6rem;font-weight:400}
+.step p{font-size:12px;line-height:1.7;color:rgba(232,224,213,0.5)}
+form{display:flex;flex-direction:column;gap:14px;margin-top:2.5rem}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+label{font-size:10px;letter-spacing:0.18em;text-transform:uppercase;color:rgba(232,224,213,0.5);margin-bottom:5px;display:block}
+input,textarea{width:100%;background:rgba(232,224,213,0.04);border:0.5px solid rgba(232,224,213,0.2);color:#e8e0d5;font-family:'Jost',sans-serif;font-size:14px;font-weight:300;padding:12px 14px}
+input:focus,textarea:focus{outline:none;border-color:#c4a882;background:rgba(232,224,213,0.06)}
+input::placeholder,textarea::placeholder{color:rgba(232,224,213,0.3)}
+textarea{min-height:90px;resize:vertical}
+button[type=submit]{font-size:10px;letter-spacing:0.25em;text-transform:uppercase;padding:15px 30px;background:#c4a882;color:#0e0d0c;border:none;cursor:pointer;margin-top:0.5rem}
+button[type=submit]:hover{opacity:0.85}
+.reply-note{font-size:11px;letter-spacing:0.08em;color:rgba(232,224,213,0.4);margin-top:1.2rem;line-height:1.7}
+.reply-note a{color:#c4a882}
+@media(max-width:768px){
+nav{padding:1.5rem}
+.wrap{padding:3rem 1.5rem}
+.title{font-size:38px}
+.steps{grid-template-columns:1fr 1fr;gap:1.5rem}
+.form-row{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+<nav>
+  <a href="index.html" class="logo">Sharanya</a>
+  <a href="index.html" class="back">← Back</a>
+</nav>
+<div class="wrap">
+  <div class="eyebrow">Commissions</div>
+  <div class="title">Something <em>made for you</em></div>
+  <div class="intro">
+    <p>Finding my way as a young banker in a big city keeps me busy, but I do take the occasional commission. It isn't too strict, just room to make something true.</p>
+    <p>I want my art to be accessible, and I understand budgets vary. I work across a range of budgets, and each piece gets the same care, attention and focus. A little laxity with timelines is what lets me deliver something that resonates, something alive and true.</p>
+    <p>I'm happy to explore direction, but if you're lost and want a sounding board, drop me a line. I can help bring a vision to life by mapping the painting to your space.</p>
+  </div>
+
+  <div class="steps">
+    <div class="step">
+      <div class="num">i</div>
+      <h4>Conversation</h4>
+      <p>Tell me about the space, the vision, anything already calling to you: Pinterest boards, old photographs you'd want to immortalise. Then a quick call to elaborate.</p>
+    </div>
+    <div class="step">
+      <div class="num">ii</div>
+      <h4>I begin painting</h4>
+      <p>I keep you posted along the way, sending milestones as the piece comes to life.</p>
+    </div>
+    <div class="step">
+      <div class="num">iii</div>
+      <h4>Three to six months</h4>
+      <p>All paintings take their time to dry and settle. I usually aim to be done early.</p>
+    </div>
+    <div class="step">
+      <div class="num">iv</div>
+      <h4>It comes home</h4>
+      <p>Final viewing, framing if you'd like it, and careful shipping to your door.</p>
+    </div>
+  </div>
+
+  <form action="https://formspree.io/f/xwlvbonp" method="POST">
+    <input type="hidden" name="_subject" value="New commission enquiry">
+    <div class="form-row">
+      <div><label>Name</label><input type="text" name="name" required></div>
+      <div><label>Email</label><input type="email" name="email" required></div>
+    </div>
+    <div class="form-row">
+      <div><label>WhatsApp number</label><input type="text" name="whatsapp" placeholder="With country code"></div>
+      <div><label>Budget range</label><input type="text" name="budget" placeholder="Optional"></div>
+    </div>
+    <div>
+      <label>Tell me about your space</label>
+      <textarea name="space" placeholder="The room, the light, the wall, anything already calling to you." required></textarea>
+    </div>
+    <div class="form-row">
+      <div><label>Size or shape in mind?</label><input type="text" name="size" placeholder="Optional"></div>
+      <div><label>Timeline</label><input type="text" name="timeline" placeholder="A date or occasion? Optional"></div>
+    </div>
+    <div>
+      <label>Pinterest or vision board link</label>
+      <input type="text" name="vision_board" placeholder="Optional">
+    </div>
+    <div>
+      <label>Anything else</label>
+      <textarea name="anything_else" placeholder="A feeling, a flower, a place, a colour, a photograph."></textarea>
+    </div>
+    <button type="submit">Start the conversation</button>
+  </form>
+  <div class="reply-note">I usually reply within 40 to 72 hours. Prefer to talk? <a href="https://wa.me/919886675718" target="_blank">Message me on WhatsApp</a>.</div>
+</div>
+</body>
+</html>
