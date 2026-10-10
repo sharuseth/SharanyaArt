@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Sharanya — Oil Paintings, London</title>
+<title>Sharanya · Oil Paintings, London</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Jost:wght@200;300;400&display=swap" rel="stylesheet">
 <style>
@@ -47,6 +47,7 @@ nav{display:flex;justify-content:space-between;align-items:center;padding:2rem 3
 .work-info p{font-size:10px;letter-spacing:0.18em;color:rgba(232,224,213,0.6);margin-bottom:10px}
 .work-link{font-size:9px;letter-spacing:0.25em;text-transform:uppercase;color:#c4a882;border-bottom:0.5px solid rgba(196,168,130,0.4);padding-bottom:2px}
 .available-badge{position:absolute;top:1rem;left:1rem;font-size:9px;letter-spacing:0.2em;text-transform:uppercase;background:rgba(196,168,130,0.15);color:#c4a882;padding:5px 10px}
+.offer-badge{position:absolute;top:1rem;left:1rem;font-size:9px;letter-spacing:0.2em;text-transform:uppercase;background:rgba(196,168,130,0.9);color:#0e0d0c;padding:5px 10px}
 .sold-overlay{position:absolute;inset:0;background:rgba(14,13,12,0);transition:background 0.3s;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:1rem}
 .work-item:hover .sold-overlay{background:rgba(14,13,12,0.75)}
 .sold-content{opacity:0;transform:translateY(6px);transition:opacity 0.3s,transform 0.3s;display:flex;flex-direction:column;align-items:center;gap:1rem}
@@ -54,19 +55,49 @@ nav{display:flex;justify-content:space-between;align-items:center;padding:2rem 3
 .sold-label{font-size:9px;letter-spacing:0.35em;text-transform:uppercase;color:rgba(232,224,213,0.6);border:0.5px solid rgba(232,224,213,0.3);padding:8px 16px}
 .sold-sub{font-family:'Cormorant Garamond',serif;font-size:15px;font-style:italic;color:rgba(232,224,213,0.5);text-align:center;padding:0 2rem}
 .sold-cta{font-size:9px;letter-spacing:0.25em;text-transform:uppercase;color:#c4a882;border-bottom:0.5px solid rgba(196,168,130,0.4);padding-bottom:2px}
-.wip-overlay{position:absolute;inset:0;background:rgba(14,13,12,0.55);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:1rem}
-.wip-label{font-size:9px;letter-spacing:0.35em;text-transform:uppercase;color:rgba(232,224,213,0.5);border:0.5px solid rgba(232,224,213,0.2);padding:8px 16px}
-.wip-title{font-family:'Cormorant Garamond',serif;font-size:18px;font-style:italic;color:rgba(232,224,213,0.7);text-align:center}
-.wip-cta{font-size:9px;letter-spacing:0.25em;text-transform:uppercase;color:#c4a882;border-bottom:0.5px solid rgba(196,168,130,0.4);padding-bottom:2px}
 .about-grid{display:grid;grid-template-columns:1fr 1.2fr;gap:6rem;align-items:start}
 .about-image{aspect-ratio:2/3;border:0.5px solid rgba(232,224,213,0.08);overflow:hidden}
 .about-image img{width:100%;height:100%;object-fit:cover}
-.about-text p{font-size:14px;line-height:1.95;color:rgba(232,224,213,0.6);margin-bottom:1.2rem}
-.about-text p.lead{font-family:'Cormorant Garamond',serif;font-size:21px;font-style:italic;font-weight:300;line-height:1.6;color:rgba(232,224,213,0.85);margin-bottom:1.8rem}
-.about-link{display:inline-block;margin-top:1.5rem;font-size:10px;letter-spacing:0.25em;text-transform:uppercase;color:#c4a882;border-bottom:0.5px solid rgba(196,168,130,0.4);padding-bottom:2px}
-.commissions{background:#131210}
-.commissions-inner{max-width:580px}
-.commissions-inner p{font-size:14px;line-height:1.9;color:rgba(232,224,213,0.55);margin-bottom:2rem}
+.about-text p{font-size:14px;line-height:1.95;color:rgba(232,224,213,0.62);margin-bottom:1.2rem}
+.about-meta{margin-top:2rem;padding-top:1.5rem;border-top:0.5px solid rgba(232,224,213,0.12)}
+.about-meta .quote{font-family:'Cormorant Garamond',serif;font-size:19px;font-style:italic;line-height:1.5;color:rgba(232,224,213,0.8);margin-bottom:1.5rem}
+.about-meta .films-label{font-size:9px;letter-spacing:0.25em;text-transform:uppercase;color:#c4a882;margin-bottom:0.6rem}
+.about-meta .films{font-size:12px;letter-spacing:0.05em;color:rgba(232,224,213,0.5);line-height:1.8}
+.peonies-section{background:#131210}
+.peonies-grid{display:grid;grid-template-columns:0.9fr 1.1fr;gap:4rem;align-items:center}
+.peonies-image{overflow:hidden;border:0.5px solid rgba(232,224,213,0.08)}
+.peonies-image img{width:100%;display:block}
+.status-line{font-size:10px;letter-spacing:0.22em;text-transform:uppercase;color:#c4a882;margin-bottom:1.5rem}
+.peonies-intro p{font-size:14px;line-height:1.9;color:rgba(232,224,213,0.6);margin-bottom:1.2rem}
+.bid-status{display:grid;grid-template-columns:1fr 1fr 1fr;gap:1px;margin:2rem 0;background:rgba(196,168,130,0.2);border:0.5px solid rgba(196,168,130,0.25)}
+.bid-col{background:#131210;padding:16px 18px}
+.bid-label{font-size:9px;letter-spacing:0.2em;text-transform:uppercase;color:rgba(232,224,213,0.45);margin-bottom:8px}
+.bid-val{font-family:'Cormorant Garamond',serif;font-size:24px;font-weight:300;color:#e8e0d5;display:flex;align-items:center;gap:8px}
+.bid-val.highlight{color:#c4a882}
+.dot{width:7px;height:7px;border-radius:50%;background:#c4a882;animation:pulse 2s infinite;display:inline-block}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:0.3}}
+.bid-note{font-size:12px;line-height:1.8;color:rgba(232,224,213,0.5);margin-bottom:0.5rem}
+.commission-redirect{font-size:12px;letter-spacing:0.05em;color:rgba(232,224,213,0.5);margin-top:1.5rem}
+.commission-redirect a{color:#c4a882;border-bottom:0.5px solid rgba(196,168,130,0.4);padding-bottom:1px}
+form{display:flex;flex-direction:column;gap:14px;margin-top:1.5rem}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+label{font-size:10px;letter-spacing:0.18em;text-transform:uppercase;color:rgba(232,224,213,0.5);margin-bottom:5px;display:block}
+input,textarea,select{width:100%;background:rgba(232,224,213,0.04);border:0.5px solid rgba(232,224,213,0.2);color:#e8e0d5;font-family:'Jost',sans-serif;font-size:14px;font-weight:300;padding:12px 14px;border-radius:0}
+input:focus,textarea:focus,select:focus{outline:none;border-color:#c4a882;background:rgba(232,224,213,0.06)}
+input::placeholder,textarea::placeholder{color:rgba(232,224,213,0.3)}
+textarea{min-height:90px;resize:vertical}
+.offer-group{display:grid;grid-template-columns:90px 1fr;gap:10px}
+button[type=submit]{font-size:10px;letter-spacing:0.25em;text-transform:uppercase;padding:15px 30px;background:#c4a882;color:#0e0d0c;border:none;cursor:pointer;margin-top:0.5rem;transition:opacity 0.2s}
+button[type=submit]:hover{opacity:0.85}
+.reply-note{font-size:11px;letter-spacing:0.08em;color:rgba(232,224,213,0.4);margin-top:1rem;line-height:1.7}
+.reply-note a{color:#c4a882}
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:1.5rem;margin:2.5rem 0}
+.step .num{font-family:'Cormorant Garamond',serif;font-size:28px;font-style:italic;color:#c4a882;margin-bottom:0.6rem}
+.step h4{font-size:11px;letter-spacing:0.15em;text-transform:uppercase;color:#e8e0d5;margin-bottom:0.6rem;font-weight:400}
+.step p{font-size:12px;line-height:1.7;color:rgba(232,224,213,0.5)}
+.commission-intro{max-width:620px}
+.commission-intro p{font-size:14px;line-height:1.9;color:rgba(232,224,213,0.6);margin-bottom:1.2rem}
+.commission-form{max-width:620px}
 .contact-section{padding:6rem 3rem;text-align:center;border-bottom:0.5px solid rgba(232,224,213,0.12)}
 .contact-section .section-title{font-size:56px;margin-bottom:1rem}
 .contact-section p{font-size:13px;color:rgba(232,224,213,0.4);letter-spacing:0.06em;margin-bottom:2.5rem}
@@ -75,7 +106,8 @@ footer{padding:2rem 3rem;display:flex;justify-content:space-between;align-items:
 footer p{font-size:10px;letter-spacing:0.15em;text-transform:uppercase;color:rgba(232,224,213,0.2)}
 @media(max-width:768px){
 nav{padding:1.5rem}
-.nav-links{gap:1.5rem}
+.nav-links{gap:1.1rem}
+.nav-links a{font-size:9px;letter-spacing:0.12em}
 .hero{grid-template-columns:1fr}
 .hero-text{padding:4rem 1.5rem}
 .hero h1{font-size:48px}
@@ -84,6 +116,9 @@ nav{padding:1.5rem}
 .works-grid{grid-template-columns:1fr 1fr}
 .about-grid{grid-template-columns:1fr;gap:2.5rem}
 .about-image{aspect-ratio:4/3}
+.peonies-grid{grid-template-columns:1fr;gap:2.5rem}
+.steps{grid-template-columns:1fr 1fr;gap:1.5rem}
+.form-row{grid-template-columns:1fr}
 .contact-section{padding:4rem 1.5rem}
 .contact-section .section-title{font-size:38px}
 footer{padding:1.5rem;flex-direction:column;align-items:flex-start}
@@ -97,6 +132,7 @@ footer{padding:1.5rem;flex-direction:column;align-items:flex-start}
   <div class="nav-links">
     <a href="#works">Works</a>
     <a href="#about">About</a>
+    <a href="#peonies">Peonies</a>
     <a href="#commissions">Commissions</a>
     <a href="#contact">Contact</a>
   </div>
@@ -108,7 +144,7 @@ footer{padding:1.5rem;flex-direction:column;align-items:flex-start}
     <h1>Oil on canvas.<br><em>Made in London.</em></h1>
     <p>Paintings that live somewhere between the quiet and the dramatic. Florals, seascapes, and the things that speak first.</p>
     <div class="hero-links">
-      <a href="https://www.etsy.com/uk/listing/4526975838/ranunculus-in-glass-london-2025-oil-on?sr_prefetch=1&pf_from=shop_home&ref=shop_home_active_1&logging_key=1b5369bf832a3b062f1e2e38c5d3b9387d169f46%3A4526975838" target="_blank" class="btn">Shop now</a>
+      <a href="https://www.etsy.com/uk/listing/4526975838/ranunculus-in-glass-london-2025-oil-on" target="_blank" class="btn">Shop now</a>
       <a href="#commissions" class="btn-ghost">Commissions open →</a>
     </div>
   </div>
@@ -123,92 +159,71 @@ footer{padding:1.5rem;flex-direction:column;align-items:flex-start}
   <div class="works-grid">
 
     <div class="work-item">
-      <a href="https://www.etsy.com/uk/listing/4526975838/ranunculus-in-glass-london-2025-oil-on?sr_prefetch=1&pf_from=shop_home&ref=shop_home_active_1&logging_key=1b5369bf832a3b062f1e2e38c5d3b9387d169f46%3A4526975838" target="_blank">
-        <div class="work-bg">
-          <img src="Rose_whitewell.jpg" alt="Ranunculus in Glass">
-        </div>
-        <div class="work-overlay">
-          <div class="work-info">
-            <h3>Ranunculus in Glass</h3>
-            <p>Oil on canvas · £130</p>
-            <span class="work-link">View on Etsy →</span>
-          </div>
-        </div>
+      <a href="https://www.etsy.com/uk/listing/4526975838/ranunculus-in-glass-london-2025-oil-on" target="_blank">
+        <div class="work-bg"><img src="Rose_whitewell.jpg" alt="Ranunculus in Glass"></div>
+        <div class="work-overlay"><div class="work-info">
+          <h3>Ranunculus in Glass</h3>
+          <p>Oil on canvas · £180</p>
+          <span class="work-link">View on Etsy →</span>
+        </div></div>
         <div class="available-badge">Available</div>
       </a>
     </div>
 
     <div class="work-item">
-      <a href="https://www.etsy.com/uk/listing/4526975838/ranunculus-in-glass-london-2025-oil-on?sr_prefetch=1&pf_from=shop_home&ref=shop_home_active_1&logging_key=1b5369bf832a3b062f1e2e38c5d3b9387d169f46%3A4526975838" target="_blank">
-        <div class="work-bg">
-          <img src="Rose_magazine.jpg" alt="Ranunculus in Glass styled">
-        </div>
-        <div class="work-overlay">
-          <div class="work-info">
-            <h3>Ranunculus in Glass</h3>
-            <p>Oil on canvas · £130</p>
-            <span class="work-link">View on Etsy →</span>
-          </div>
-        </div>
+      <a href="https://www.etsy.com/uk/listing/4526975838/ranunculus-in-glass-london-2025-oil-on" target="_blank">
+        <div class="work-bg"><img src="Rose_magazine.jpg" alt="Ranunculus in Glass styled"></div>
+        <div class="work-overlay"><div class="work-info">
+          <h3>Ranunculus in Glass</h3>
+          <p>Oil on canvas · £180</p>
+          <span class="work-link">View on Etsy →</span>
+        </div></div>
         <div class="available-badge">Available</div>
       </a>
     </div>
 
     <div class="work-item">
-      <a href="#commissions" onclick="document.getElementById('commissions').scrollIntoView({behavior:'smooth'});return false;">
-        <div class="work-bg">
-          <img src="Blue_FlowerVase.JPG" alt="Before the Storm seascape">
-        </div>
-        <div class="sold-overlay">
-          <div class="sold-content">
-            <span class="sold-label">Sold</span>
-            <span class="sold-sub">This piece has found its home</span>
-            <span class="sold-cta">Commission something similar →</span>
-          </div>
-        </div>
+      <a href="#commissions">
+        <div class="work-bg"><img src="Blue_FlowerVase.JPG" alt="Before the Storm seascape"></div>
+        <div class="sold-overlay"><div class="sold-content">
+          <span class="sold-label">Sold</span>
+          <span class="sold-sub">This piece has found its home</span>
+          <span class="sold-cta">Commission something similar →</span>
+        </div></div>
       </a>
     </div>
 
     <div class="work-item">
-      <a href="#commissions" onclick="document.getElementById('commissions').scrollIntoView({behavior:'smooth'});return false;">
-        <div class="work-bg">
-          <img src="Blue_EiCoffeetable.JPG" alt="Before the Storm detail">
-        </div>
-        <div class="sold-overlay">
-          <div class="sold-content">
-            <span class="sold-label">Sold</span>
-            <span class="sold-sub">This piece has found its home</span>
-            <span class="sold-cta">Commission something similar →</span>
-          </div>
-        </div>
+      <a href="#commissions">
+        <div class="work-bg"><img src="Blue_EiCoffeetable.JPG" alt="Before the Storm detail"></div>
+        <div class="sold-overlay"><div class="sold-content">
+          <span class="sold-label">Sold</span>
+          <span class="sold-sub">This piece has found its home</span>
+          <span class="sold-cta">Commission something similar →</span>
+        </div></div>
       </a>
     </div>
 
     <div class="work-item">
-      <a href="#commissions" onclick="document.getElementById('commissions').scrollIntoView({behavior:'smooth'});return false;">
-        <div class="work-bg">
-          <img src="Blue_EifLOWER.JPG" alt="Pink Shore seascape">
-        </div>
-        <div class="sold-overlay">
-          <div class="sold-content">
-            <span class="sold-label">Sold</span>
-            <span class="sold-sub">This piece has found its home</span>
-            <span class="sold-cta">Commission something similar →</span>
-          </div>
-        </div>
+      <a href="#commissions">
+        <div class="work-bg"><img src="Blue_EifLOWER.JPG" alt="Pink Shore seascape"></div>
+        <div class="sold-overlay"><div class="sold-content">
+          <span class="sold-label">Sold</span>
+          <span class="sold-sub">This piece has found its home</span>
+          <span class="sold-cta">Commission something similar →</span>
+        </div></div>
       </a>
     </div>
 
     <div class="work-item">
-      <a href="https://www.instagram.com/what_sharu_does" target="_blank">
-        <div class="work-bg">
-          <img src="Peony_Crop.JPG" alt="Peonies, work in progress">
-        </div>
-        <div class="wip-overlay">
-          <span class="wip-label">Coming soon</span>
-          <span class="wip-title">Peonies</span>
-          <span class="wip-cta">Follow on Instagram →</span>
-        </div>
+      <a href="#peonies">
+        <div class="work-bg"><img src="Peony_Crop.JPG" alt="Peonies, underway"></div>
+        <div class="work-overlay"><div class="work-info">
+          <h3>Peonies</h3>
+          <p>Oil on canvas · 60 × 80cm</p>
+          <span class="work-link">Register interest →</span>
+        </div></div>
+        <div class="offer-badge">Underway</div>
       </a>
     </div>
 
@@ -218,26 +233,61 @@ footer{padding:1.5rem;flex-direction:column;align-items:flex-start}
 <section class="section" id="about">
   <div class="about-grid">
     <div class="about-image">
-      <img src="Rose_Studio_colourwheel.JPG" alt="Sharanya painting in her London studio">
+      <img src="Rose_Studio_colourwheel.JPG" alt="Sharanya in her studio">
     </div>
     <div class="about-text">
       <div class="eyebrow">The artist</div>
       <div class="section-title" style="font-size:38px;margin-bottom:1.5rem"><em>Sharanya</em></div>
-      <p class="lead">Life got very busy and I felt like I was forgetting who I was. I picked up a brush again. Turns out that helped.</p>
-      <p>I live on a little hill in London. I paint florals, seascapes, and whatever whispers to me on a given afternoon. Colour is my love language and I've always secretly wanted to live in the Victorian era — you'll notice.</p>
-      <p>Most of my life I've painted for the people I love. I'm learning, slowly and joyfully, to paint for myself too. These are those paintings.</p>
-      <p>I'm also a student economist by day, which means every single purchase genuinely means the world.</p>
-      <a href="#commissions" class="about-link">Commission a piece →</a>
+      <p>Sharanya has always loved art. Today she works mostly in oil, but also in poetry, prose and code.</p>
+      <p>She has just finished at the London School of Economics, where her academic interests spanned critical consciousness, critical pedagogies, decision ethics and gender economics. She previously ran an NGO centred on Amartya Sen's aspiration gap in South Asia, and is a data scientist by training. Her mother wouldn't let her have a pet, so she channels it into being a very proud elder sister, and loves logographic languages, Japanese lately.</p>
+      <p>As a painter she is self-taught, later refining her technique through atelier study in Prague. Her work is recognisable for a bespoke mastery of colour, hue and value. A perfectionist, she often works with a size 0 brush, layering patiently over months to build a depth and charisma that are hard to place. A single small painting can hold over three hundred individual colours.</p>
+      <p>Her debut poetry collection, on memory and stillness, follows this September.</p>
+      <div class="about-meta">
+        <div class="quote">"If only the birds who were good at singing sang, the forest would be very quiet."</div>
+        <div class="films-label">Films on repeat</div>
+        <div class="films">Cinema Paradiso (Giuseppe Tornatore, 1988) · Everything Everywhere All at Once (Daniels, 2022) · The Sound of Music (Robert Wise, 1965) · X-Men (Bryan Singer, 2000)</div>
+      </div>
     </div>
   </div>
 </section>
 
-<section class="section commissions" id="commissions">
-  <div class="commissions-inner">
+<section class="section peonies-section" id="peonies">
+  <div class="peonies-grid">
+    <div class="peonies-image">
+      <img src="Peony_Crop.JPG" alt="Peonies, oil on canvas, 60 by 80cm, currently underway">
+    </div>
+    <div class="peonies-intro">
+      <div class="eyebrow">Currently on the easel</div>
+      <div class="section-title" style="font-size:40px;margin-bottom:1.2rem"><em>Peonies</em></div>
+      <div class="status-line">Underway · Completing October · Shipping November</div>
+      <p>Large peonies in oil, 60 × 80cm. Finishing this October, with viewings from late October and shipping in November.</p>
+      <p class="bid-note">I don't set a fixed price on new work. Enter a price that works for you, and I'll let you know if anything changes. Pieces move quietly, and buyers drift in and out, so if it's calling to you, say so.</p>
+      <div class="bid-status">
+        <div class="bid-col">
+          <div class="bid-label">Opening</div>
+          <div class="bid-val">£1,150</div>
+        </div>
+        <div class="bid-col">
+          <div class="bid-label">Highest offer</div>
+          <div class="bid-val highlight">£1,550</div>
+        </div>
+        <div class="bid-col">
+          <div class="bid-label">Status</div>
+          <div class="bid-val" style="font-size:16px"><span class="dot"></span>Open</div>
+        </div>
+      </div>
+      <p style="margin-top:2rem"><a href="peonies.html" class="btn">Register your interest</a></p>
+      <div class="commission-redirect">Would rather have a piece of your own? <a href="commissions.html">Commission something here →</a></div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="commissions">
+  <div class="commission-intro">
     <div class="eyebrow">Commissions</div>
     <div class="section-title">Something <em>made for you</em></div>
-    <p>I occasionally take commissions. If you have something in mind — a flower, a place, a feeling — drop me a line and we can talk about it. I paint what speaks to me, so commissions work best when there's room to make something that feels true.</p>
-    <a href="mailto:sharuseth2@gmail.com" class="btn">Get in touch</a>
+    <p>I occasionally take commissions. If you have something in mind, a flower, a place, a feeling, drop me a line and we can talk about it. I paint what speaks to me, so commissions work best when there's room to make something that feels true.</p>
+    <p style="margin-top:2rem"><a href="commissions.html" class="btn">Begin a commission</a></p>
   </div>
 </section>
 
@@ -245,7 +295,7 @@ footer{padding:1.5rem;flex-direction:column;align-items:flex-start}
   <div class="eyebrow">Contact</div>
   <div class="section-title"><em>Say hello</em></div>
   <p>For commissions, enquiries, or just to say something nice.</p>
-  <a href="mailto:sharuseth2@gmail.com" class="contact-email">sharuseth2@gmail.com</a>
+  <a href="https://wa.me/919886675718" target="_blank" class="contact-email">Message me on WhatsApp</a>
 </section>
 
 <footer>
