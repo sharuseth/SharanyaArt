@@ -50,6 +50,8 @@ nav{display:flex;justify-content:space-between;align-items:center;padding:2rem 3
 .offer-badge{position:absolute;top:1rem;left:1rem;font-size:9px;letter-spacing:0.2em;text-transform:uppercase;background:rgba(196,168,130,0.9);color:#0e0d0c;padding:5px 10px}
 .sold-overlay{position:absolute;inset:0;background:rgba(14,13,12,0);transition:background 0.3s;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:1rem}
 .work-item:hover .sold-overlay{background:rgba(14,13,12,0.75)}
+.sold-overlay.coming{background:rgba(14,13,12,0.42)}
+.work-item:hover .sold-overlay.coming{background:rgba(14,13,12,0.78)}
 .sold-content{opacity:0;transform:translateY(6px);transition:opacity 0.3s,transform 0.3s;display:flex;flex-direction:column;align-items:center;gap:1rem}
 .work-item:hover .sold-content{opacity:1;transform:translateY(0)}
 .sold-label{font-size:9px;letter-spacing:0.35em;text-transform:uppercase;color:rgba(232,224,213,0.6);border:0.5px solid rgba(232,224,213,0.3);padding:8px 16px}
@@ -219,7 +221,7 @@ footer{padding:1.5rem;flex-direction:column;align-items:flex-start}
     <div class="work-item">
       <a href="peonies.html">
         <div class="work-bg"><img src="Peony_v2.JPG" alt="Peonies, on the easel"></div>
-        <div class="sold-overlay"><div class="sold-content">
+        <div class="sold-overlay coming"><div class="sold-content">
           <span class="sold-label">Coming soon</span>
           <span class="sold-sub">On the easel. Completing October, shipping November.</span>
           <span class="sold-cta">Register your interest →</span>
