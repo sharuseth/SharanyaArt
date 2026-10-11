@@ -27,9 +27,10 @@ nav{display:flex;justify-content:space-between;align-items:center;padding:2rem 3
 form{display:flex;flex-direction:column;gap:14px;margin-top:2.5rem}
 .form-row{display:grid;grid-template-columns:1fr 1fr;gap:14px}
 label{font-size:10px;letter-spacing:0.18em;text-transform:uppercase;color:rgba(232,224,213,0.5);margin-bottom:5px;display:block}
-input,textarea{width:100%;background:rgba(232,224,213,0.04);border:0.5px solid rgba(232,224,213,0.2);color:#e8e0d5;font-family:'Jost',sans-serif;font-size:14px;font-weight:300;padding:12px 14px}
-input:focus,textarea:focus{outline:none;border-color:#c4a882;background:rgba(232,224,213,0.06)}
+input,textarea,select{width:100%;background:rgba(232,224,213,0.04);border:0.5px solid rgba(232,224,213,0.2);color:#e8e0d5;font-family:'Jost',sans-serif;font-size:14px;font-weight:300;padding:12px 14px}
+input:focus,textarea:focus,select:focus{outline:none;border-color:#c4a882;background:rgba(232,224,213,0.06)}
 input::placeholder,textarea::placeholder{color:rgba(232,224,213,0.3)}
+select option{background:#131210;color:#e8e0d5}
 textarea{min-height:90px;resize:vertical}
 button[type=submit]{font-size:10px;letter-spacing:0.25em;text-transform:uppercase;padding:15px 30px;background:#c4a882;color:#0e0d0c;border:none;cursor:pointer;margin-top:0.5rem}
 button[type=submit]:hover{opacity:0.85}
@@ -76,8 +77,8 @@ nav{padding:1.5rem}
     </div>
     <div class="step">
       <div class="num">iv</div>
-      <h4>It comes home</h4>
-      <p>Final viewing, framing if you'd like it, and careful shipping to your door.</p>
+      <h4>It's coming home</h4>
+      <p>I send you final photographs to make sure you're happy with the piece. Framing if you'd like it, and careful shipping to your door. Oil paintings can stay in your family for decades, so I'll guide you on how to best care for your piece.</p>
     </div>
   </div>
 
@@ -98,6 +99,17 @@ nav{padding:1.5rem}
     <div class="form-row">
       <div><label>Size or shape in mind?</label><input type="text" name="size" placeholder="Optional"></div>
       <div><label>Timeline</label><input type="text" name="timeline" placeholder="A date or occasion? Optional"></div>
+    </div>
+    <div class="form-row">
+      <div>
+        <label>Would you like it framed?</label>
+        <select name="framing">
+          <option value="Not sure yet">Not sure yet</option>
+          <option value="Yes, framed">Yes, framed</option>
+          <option value="No, unframed">No, unframed</option>
+        </select>
+      </div>
+      <div></div>
     </div>
     <div>
       <label>Pinterest or vision board link</label>
