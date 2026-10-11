@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Poetry · Sharanya</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Jost:wght@200;300;400&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:#0e0d0c;color:#e8e0d5;font-family:'Jost',sans-serif;font-weight:300}
+a{text-decoration:none;color:inherit}
+nav{display:flex;justify-content:space-between;align-items:center;padding:2rem 3rem;border-bottom:0.5px solid rgba(232,224,213,0.12);position:sticky;top:0;background:#0e0d0c;z-index:100}
+.logo{font-family:'Cormorant Garamond',serif;font-size:22px;font-weight:300;letter-spacing:0.18em;text-transform:uppercase}
+.back{font-size:11px;letter-spacing:0.2em;text-transform:uppercase;color:rgba(232,224,213,0.5)}
+.back:hover{color:#e8e0d5}
+.hero{text-align:center;padding:6rem 2rem 4rem;border-bottom:0.5px solid rgba(232,224,213,0.1)}
+.hero .eyebrow{font-size:10px;letter-spacing:0.35em;text-transform:uppercase;color:#c4a882;margin-bottom:1.5rem}
+.hero h1{font-family:'Cormorant Garamond',serif;font-size:58px;font-weight:300;font-style:italic;line-height:1.1;margin-bottom:1.5rem;color:#c4a882}
+.hero p{font-size:14px;letter-spacing:0.04em;line-height:1.9;color:rgba(232,224,213,0.55);max-width:480px;margin:0 auto}
+.poem-wrap{max-width:640px;margin:0 auto;padding:5rem 2rem}
+.poem-title{font-family:'Cormorant Garamond',serif;font-size:13px;letter-spacing:0.3em;text-transform:uppercase;color:#c4a882;text-align:center;margin-bottom:3.5rem}
+.poem{font-family:'Cormorant Garamond',serif;font-size:20px;font-weight:300;line-height:1.85;color:rgba(232,224,213,0.9)}
+.poem .stanza{margin-bottom:2.2rem}
+.poem .date{font-style:italic;color:#c4a882;display:block;margin-bottom:0.3rem}
+.poem .mark{text-align:center;color:rgba(196,168,130,0.5);letter-spacing:0.5em;margin:2.5rem 0}
+.poem .dedication{text-align:center;font-style:italic;font-size:17px;color:rgba(232,224,213,0.7);margin-top:1rem}
+.footnote{font-family:'Jost',sans-serif;font-size:11px;letter-spacing:0.05em;line-height:1.7;color:rgba(232,224,213,0.4);max-width:640px;margin:0 auto;padding:0 2rem 2rem;text-align:center;font-style:normal}
+.interest{max-width:520px;margin:0 auto;padding:4rem 2rem 6rem;text-align:center;border-top:0.5px solid rgba(232,224,213,0.1)}
+.interest .eyebrow{font-size:10px;letter-spacing:0.3em;text-transform:uppercase;color:#c4a882;margin-bottom:1.2rem}
+.interest h2{font-family:'Cormorant Garamond',serif;font-size:34px;font-weight:300;font-style:italic;margin-bottom:1.2rem}
+.interest p{font-size:13px;line-height:1.9;color:rgba(232,224,213,0.55);margin-bottom:1.5rem}
+.interest-line{display:inline-flex;align-items:center;gap:10px;font-size:11px;letter-spacing:0.12em;color:rgba(232,224,213,0.7);margin-bottom:2rem}
+.dot{width:7px;height:7px;border-radius:50%;background:#c4a882;animation:pulse 2s infinite;display:inline-block}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:0.3}}
+form{display:flex;flex-direction:column;gap:14px;max-width:420px;margin:0 auto;text-align:left}
+label{font-size:10px;letter-spacing:0.18em;text-transform:uppercase;color:rgba(232,224,213,0.5);margin-bottom:5px;display:block}
+input{width:100%;background:rgba(232,224,213,0.04);border:0.5px solid rgba(232,224,213,0.2);color:#e8e0d5;font-family:'Jost',sans-serif;font-size:14px;font-weight:300;padding:12px 14px}
+input:focus{outline:none;border-color:#c4a882;background:rgba(232,224,213,0.06)}
+input::placeholder{color:rgba(232,224,213,0.3)}
+button[type=submit]{font-size:10px;letter-spacing:0.25em;text-transform:uppercase;padding:15px 30px;background:#c4a882;color:#0e0d0c;border:none;cursor:pointer;margin-top:0.5rem}
+button[type=submit]:hover{opacity:0.85}
+.reply-note{font-size:11px;letter-spacing:0.08em;color:rgba(232,224,213,0.4);margin-top:1.2rem}
+.reply-note a{color:#c4a882}
+@media(max-width:768px){
+nav{padding:1.5rem}
+.hero{padding:4rem 1.5rem 3rem}
+.hero h1{font-size:40px}
+.poem-wrap{padding:3.5rem 1.5rem}
+.poem{font-size:18px}
+}
+</style>
+</head>
+<body>
+<nav>
+  <a href="index.html" class="logo">Sharanya</a>
+  <a href="index.html" class="back">← Back</a>
+</nav>
+
+<section class="hero">
+  <div class="eyebrow">Poetry</div>
+  <h1>Leaving the Amaltas</h1>
+  <p>A debut collection, in the making.</p>
+</section>
+
+<div class="poem-wrap">
+  <div class="poem">
+
+    <div class="stanza">
+      <span class="date">On the 17th of March,</span>
+      there will be an afternoon,<br>
+      where the Amaltas will shrug-<br>
+      of their heavy winter coats-<br>
+      too forcefully,<br>
+      and tumble headlong into spring,<br>
+      as if by innocent mistake.<br>
+      And I will catch them.<br>
+      And tuck them gently behind the ear of my grandmother,<br>
+      So they can still stay warm.<br>
+      She will squeal in delight,<br>
+      And ask me if I'd like Amaltas embroidered on the corners, of the quilt she was knitting.<br>
+      I'd tut and tell her it's too much work.
+    </div>
+
+    <div class="stanza">
+      <span class="date">On the 17th of July,</span>
+      there will be a day,<br>
+      where the rains will drive away the clouds,<br>
+      and replace the sky with a grey watercolour wash.<br>
+      And the Amaltas will be the only colour for miles.<br>
+      I will brush the dirt off its hanging buds,<br>
+      and run its butter-like-petals through my fingertips.<br>
+      And we'll both complain about the rain, to my grandmother - still knitting.<br>
+      And she will smile and apologize<br>
+      and say it's her fault,<br>
+      for she spun the clouds into yarn for her quilt.
+    </div>
+
+    <div class="stanza">
+      <span class="date">On the 17th of August</span>
+      The Sun's heart will tire of separation,<br>
+      and it will sneak out unnoticed from behind the clouds,<br>
+      To meet me below the Amaltas.<br>
+      And I will spend long afternoon hours,<br>
+      gazing at the sunlight-draped-Amaltas,<br>
+      committing every crevice of its countenance to memory.<br>
+      By-hearting it's shades-<br>
+      Its viridans, chartreuses and dulled limes.<br>
+      And I will lean back against my grandmother's knee, her quilt now flowing off her lap-<br>
+      And I will marvel,<br>
+      at how grass and sunshine and Amaltas,<br>
+      could make our little concrete compound,<br>
+      seem infinite.<br>
+      She will smile wistfully,<br>
+      And spin the sunshine into her quilt for good measure.
+    </div>
+
+    <div class="stanza">
+      <span class="date">On the 17th of September</span>
+      I will leave. -the Amaltas<br>
+      -hanging.<br>
+      To catch themselves when they fall,<br>
+      out of winter.<br>
+      I wonder if the next time I see it all<br>
+      it will all look smaller than I remember.<br>
+      If I would have grown too big to appreciate the small things.<br>
+      Or if the Amaltas would have grown too tall, For me to wrap my arms around them.<br>
+      But my grandmother will come around,<br>
+      And place a finished quilt-<br>
+      -with Amaltas embroidered around the corners, On my suitcase.<br>
+      And my brother will wrap his arms around me<br>
+      and I will run my fingertips through his hair, that is really no different than Amalta petals.<br>
+      And I will realise -<br>
+      that some things - like arms and quilts<br>
+      Will always fit around you.
+    </div>
+
+    <div class="mark">* * * * *</div>
+    <div class="dedication">To Harith and Nani</div>
+
+  </div>
+</div>
+
+<div class="footnote">
+  Amaltas are a native Indian flowering tree, nicknamed the Indian Laburnum.
+</div>
+
+<section class="interest">
+  <div class="eyebrow">The collection</div>
+  <h2>Register your interest</h2>
+  <p>The collection is in the making. Leave your name, and you'll be among the first to know when it arrives.</p>
+  <div class="interest-line"><span class="dot"></span>50 readers have registered interest</div>
+  <form action="https://formspree.io/f/xwlvbonp" method="POST">
+    <input type="hidden" name="_subject" value="Poetry collection interest">
+    <input type="hidden" name="enquiry_type" value="Poetry collection">
+    <div><label>Name</label><input type="text" name="name" required></div>
+    <div><label>Email</label><input type="email" name="email" required></div>
+    <button type="submit">Register your interest</button>
+  </form>
+  <div class="reply-note">Prefer to say hello? <a href="https://wa.me/919886675718" target="_blank">Message me on WhatsApp</a>.</div>
+</section>
+
+</body>
+</html>
